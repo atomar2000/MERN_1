@@ -1,0 +1,19 @@
+import { makeStyles } from '@material-ui/core'
+import {useSelector} from 'react-redux'
+import React from 'react'
+import Post from './post/post'
+import useStyles from './styles'
+const Posts = () =>{
+    const posts = useSelector((state)=>state.posts)
+    const classes = useStyles();  
+    console.log(posts);
+    return (
+        <>
+        <h1> Posts </h1>
+        <Post/>
+        <Post/>
+        </>
+    );
+}
+
+export default Posts;
